@@ -1,5 +1,6 @@
 import random
 
+# User enters the choices and computers choice gets generated
 def get_choices():
   player_choice = input("Enter a choice (rock, paper, scissors) ")
   options = ["rock", "paper", "scissors"]
@@ -7,7 +8,7 @@ def get_choices():
   choices = {"player": player_choice, "computer": computer_choice}
   return choices
 
-
+# Logical queries, who won
 def check_win(player, computer):
   print(f"You chose {player}, Comptuer chose {computer}")
   if player == computer:
@@ -27,7 +28,6 @@ def check_win(player, computer):
       return "Rock smashes scissors! You lose."
     else:
       return "Scissors cuts paper! You win!"
-
 
 choices = get_choices()
 result = check_win(choices["player"], choices["computer"])
